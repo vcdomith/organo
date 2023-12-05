@@ -5,30 +5,34 @@ import CampoTexto from '../CampoTexto/CampoTexto'
 import ListaSuspensa from '../ListaSuspensa/ListaSuspensa'
 import './Formulario.css'
 
-const Formulario = () => {
-
-    const times = [
-
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'Devops',
-        'Ux e Design',
-        'Mobile',
-        'Inovação e Gestão'
-
-    ]
+const Formulario = (props) => {
 
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
     const [time, setTime] = useState('')
 
+    const limpaForm = () => {
+
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
+
+    }
+
     const aoSalvar = (evento) => {
 
         evento.preventDefault()
 
-        console.log('Form foi submetido', nome, cargo, imagem, time)
+        props.aoCadastrar({
+            nome,
+            cargo,
+            imagem,
+            time
+        })
+
+        limpaForm()
 
     }
 
@@ -61,7 +65,7 @@ const Formulario = () => {
                 <ListaSuspensa 
                     obrigatorio={true} 
                     label="Time" 
-                    itens={times}
+                    itens={props.times}
                     valor={time}
                     aoAlterado={valor => setTime(valor)}
                 />
