@@ -5,10 +5,10 @@ const Time = (props) => {
 
     return (
         // Podemos usar tanto o operador ternário quanto o condição(booleano) && ...codigo
-        // props.colaboradores.length > 0 &&
-        props.colaboradores.length > 0
-
-        ? <section 
+        // props.colaboradores.length > 0
+        
+        props.colaboradores.length > 0 &&
+        <section 
             className='time'
             style={{ backgroundColor: props.corSecundaria }}
         >
@@ -28,7 +28,6 @@ const Time = (props) => {
             </div>
         </section>
         
-        : ''
     )
 
 }

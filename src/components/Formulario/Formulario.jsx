@@ -57,7 +57,7 @@ const Formulario = (props) => {
                 />
                 <CampoTexto 
                     label="Imagem" 
-                    placeholder="Digiteo endereço da sua 
+                    placeholder="Digite o endereço da sua 
                     imagem"
                     valor={imagem} 
                     aoAlterado={valor => setImagem(valor)}
