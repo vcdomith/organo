@@ -19,7 +19,7 @@ function App() {
       corSecundaria: '#E8F8FF',
     },
     {
-      nome: 'Data Sciense',
+      nome: 'Data Science',
       corPrimaria: '#A6D157',
       corSecundaria: '#F0F8E2',
     },
@@ -50,9 +50,8 @@ function App() {
 
   const novoColaborador = (colaborador) => {
 
-      console.log(colaborador);
-
-      setColaboradores([...colaboradores, colaborador])
+    debugger
+    setColaboradores([...colaboradores, colaborador])
 
   }
 
